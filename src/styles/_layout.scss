@@ -3,11 +3,32 @@
     min-height: 50rem;
     margin: 4rem auto;
 
-    background-color: $color-gray-light;
+    background-color: $color-grey-light-1;
     box-shadow: $shadow-dark;
+    border-radius: 15px;
+    overflow: hidden;
 
     @include respond(tab-port) {
         margin: 0 auto;
         min-height: 100vh;
+        border-radius: 0;
+    }
+}
+
+#main-header{
+    font-size: 1.4rem;
+    height: 5rem;
+    background-color: $color-white;
+    border-bottom: 1.5px solid $color-grey-dark-1;
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 7rem;
     }
 }

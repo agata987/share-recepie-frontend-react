@@ -1,0 +1,58 @@
+#logo {
+  width: 2.5rem;
+  fill: $color-secondary;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: $color-grey-dark-2;
+}
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    flex: 0 0 50%;
+  }
+
+  @include respond(phone) {
+    flex: 0 0 60%;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: $color-grey-light-2;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: $color-grey-light-3;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    margin-left: -3.25rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}

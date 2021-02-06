@@ -4,11 +4,17 @@ $color-primary-dark:#007c6f;
 
 $color-secondary: #ffa17a;
 
-$color-gray-light: #faf9f9;
-$color-gray-dark: #333;
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #f0eeee;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #444;
+
+$color-white: #fff;
 
 // SHADOWS
-$shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+$shadow-dark: 0 2rem 6rem rgba(36, 16, 16, 0.3);
 
 /* MEDIA
 0 - 600px:      Phone
@@ -81,7 +87,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: $color-gray-dark;
+    color: $color-grey-dark-1;
 
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
