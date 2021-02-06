@@ -1,0 +1,13 @@
+#main-container {
+    max-width: 120rem;
+    min-height: 50rem;
+    margin: 4rem auto;
+
+    background-color: $color-gray-light;
+    box-shadow: $shadow-dark;
+
+    @include respond(tab-port) {
+        margin: 0 auto;
+        min-height: 100vh;
+    }
+}

@@ -1,0 +1,89 @@
+// COLORS
+$color-primary-light: #2e9776;
+$color-primary-dark:#007c6f;
+
+$color-secondary: #ffa17a;
+
+$color-gray-light: #faf9f9;
+$color-gray-dark: #333;
+
+// SHADOWS
+$shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+
+/* MEDIA
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800]:  Normal styles
+1800px + :      Big desktop
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  // 1 REM DEFINITION
+  font-size: 62.5%;     // 1rem = 10px, 10px/ 16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%;  // 1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;     // 1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;     // 1rem = 12px
+  }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-gray-dark;
+
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
+    min-height: 100vh;
+}
