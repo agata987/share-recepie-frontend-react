@@ -10,7 +10,7 @@ const SearchInput = (props) => {
         type="text"
         placeholder="Search..."
       />
-      <button className='search__button'>
+      <button className='search__button button'>
         <IcomoonReact className="icon" iconSet={iconSet} icon="search" />
       </button>
     </div>

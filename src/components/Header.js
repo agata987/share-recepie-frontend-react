@@ -8,7 +8,9 @@ const Header = (props) => {
     <header id="main-header">
       <IcomoonReact id="logo" iconSet={iconSet} icon='leaf' />
       <SearchInput />
-      <div>login</div>
+      <button className='button button--login' >
+      <IcomoonReact className="icon icon--login" iconSet={iconSet} icon="user" />
+      </button>
     </header>
   );
 };

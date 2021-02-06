@@ -7,6 +7,12 @@
   width: 2rem;
   height: 2rem;
   fill: $color-grey-dark-2;
+
+  &--login {
+    width: 3rem;
+    height: 3rem;
+    fill: $color-white;
+  }
 }
 
 .search {
@@ -43,16 +49,24 @@
   }
 
   &__button {
-    border: none;
-    background-color: transparent;
     margin-left: -3.25rem;
+  }
+}
 
-    &:focus {
-      outline: none;
-    }
+.button {
+  border: none;
+  background-color: transparent;
 
-    &:active {
-      transform: translateY(2px);
-    }
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &--login {
+    border-radius: 50%;
+    background-color: $color-grey-medium-1;
   }
 }

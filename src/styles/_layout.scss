@@ -27,7 +27,6 @@
     align-items: center;
 
     @include respond(tab-port) {
-        flex-wrap: wrap;
         align-content: space-around;
         height: 7rem;
     }

@@ -1,12 +1,14 @@
 // COLORS
 $color-primary-light: #2e9776;
-$color-primary-dark:#007c6f;
+$color-primary-dark: #007c6f;
 
-$color-secondary: #ffa17a;
+$color-secondary: #af66ac;
 
 $color-grey-light-1: #faf9f9;
 $color-grey-light-2: #f4f2f2;
 $color-grey-light-3: #f0eeee;
+
+$color-grey-medium-1: #75797b;
 
 $color-grey-dark-1: #333;
 $color-grey-dark-2: #444;
@@ -61,35 +63,39 @@ html {
   box-sizing: border-box;
 
   // 1 REM DEFINITION
-  font-size: 62.5%;     // 1rem = 10px, 10px/ 16px = 62.5%
+  font-size: 62.5%; // 1rem = 10px, 10px/ 16px = 62.5%
 
   @include respond(tab-land) {
-    font-size: 56.25%;  // 1rem = 9px
+    font-size: 56.25%; // 1rem = 9px
   }
 
   @include respond(tab-port) {
-    font-size: 50%;     // 1rem = 8px
+    font-size: 50%; // 1rem = 8px
   }
 
   @include respond(big-desktop) {
-    font-size: 75%;     // 1rem = 12px
+    font-size: 75%; // 1rem = 12px
   }
 }
 
 body {
-    box-sizing: border-box;
-    padding: 3rem;
+  box-sizing: border-box;
+  padding: 3rem;
 
-    @include respond(tab-port) {
-        padding: 0;
-    }
+  @include respond(tab-port) {
+    padding: 0;
+  }
 
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: $color-grey-dark-1;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-grey-dark-1;
 
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
 
-    min-height: 100vh;
+  min-height: 100vh;
 }
