@@ -7,38 +7,38 @@ const SideBar = (props) => {
       <ul className="side-list">
         <li className="side-list__item">
           <NavLink
-            to="/breakfast"
+            to="/recepies"
             className="side-list__link"
             activeClassName="side-list__link--active"
           >
-            Breakfast
+            Recepies
           </NavLink>
         </li>
         <li className="side-list__item">
           <NavLink
-            to="/lunch"
+            to="/tips"
             className="side-list__link"
             activeClassName="side-list__link--active"
           >
-            Lunch
+            Kitchen Tips
           </NavLink>
         </li>
         <li className="side-list__item">
           <NavLink
-            to="/dinner"
+            to="/diet"
             className="side-list__link"
             activeClassName="side-list__link--active"
           >
-            Dinner
+            Health &amp; Diet
           </NavLink>
         </li>
         <li className="side-list__item">
           <NavLink
-            to="/snacks"
+            to="/news"
             className="side-list__link"
             activeClassName="side-list__link--active"
           >
-            Snacks
+            News
           </NavLink>
         </li>
       </ul>

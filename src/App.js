@@ -1,11 +1,15 @@
 import Header from './components/Header';
 import SideBar from './components/SideBar';
+
+import MainView from './components/views/MainView';
 import RecepiesView from './components/views/RecepiesView';
+import TipsView from './components/views/TipsView';
+import DietView from './components/views/DietView';
+import NewsView from './components/views/NewsView';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
-
   return (
     <div id="main-container">
       <Header />
@@ -13,17 +17,20 @@ function App() {
         <Router>
           <SideBar />
           <Switch>
-            <Route path="/breakfast">
-              <RecepiesView type="breakfast" />
+            <Route path="/recepies">
+              <RecepiesView />
             </Route>
-            <Route path="/lunch">
-              <RecepiesView type="lunch" />
+            <Route path="/tips">
+              <TipsView />
             </Route>
-            <Route path="/dinner">
-              <RecepiesView type="dinner" />
+            <Route path="/diet">
+              <DietView />
             </Route>
-            <Route path="/snacks">
-              <RecepiesView type="snacks" />
+            <Route path="/news">
+              <NewsView />
+            </Route>
+            <Route path="/">
+              <MainView />
             </Route>
           </Switch>
         </Router>

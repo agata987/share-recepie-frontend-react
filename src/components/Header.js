@@ -6,7 +6,7 @@ import IcomoonReact from 'icomoon-react';
 const Header = (props) => {
   return (
     <header id="main-header">
-      <IcomoonReact id="logo" iconSet={iconSet} icon="leaf" />
+      <a href='/'><IcomoonReact id="logo" iconSet={iconSet} icon="leaf" /></a>
       <SearchInput />
       <button className="button button--login">
         <IcomoonReact
