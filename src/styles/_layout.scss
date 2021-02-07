@@ -1,33 +1,52 @@
-#main-container {
-    max-width: 120rem;
-    min-height: 50rem;
-    margin: 4rem auto;
+#main{
+    &-container {
+        max-width: 120rem;
+        margin: 4rem auto;
+    
+        background-color: $color-grey-light-1;
+        box-shadow: $shadow-dark;
+        border-radius: 15px;
+        overflow: hidden;
+    
+        @include respond(tab-port) {
+            margin: 0 auto;
+            min-height: 100vh;
+            border-radius: 0;
+        }
+    }
 
-    background-color: $color-grey-light-1;
-    box-shadow: $shadow-dark;
-    border-radius: 15px;
-    overflow: hidden;
+    &-header{
+        font-size: 1.4rem;
+        height: 6rem;
+        background-color: $color-white;
+        border-bottom: 1.5px solid $color-grey-dark-1;
+        padding: 0 2rem;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        @include respond(tab-port) {
+            align-content: space-around;
+            height: 7rem;
+        }
+    }
 
-    @include respond(tab-port) {
-        margin: 0 auto;
-        min-height: 100vh;
-        border-radius: 0;
+    &-content {
+        display: flex;
+        min-height: 50rem;
+        
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
     }
 }
 
-#main-header{
-    font-size: 1.4rem;
-    height: 5rem;
-    background-color: $color-white;
-    border-bottom: 1.5px solid $color-grey-dark-1;
-    padding: 0 2rem;
+.sidebar {
+    background-color: $color-grey-dark-1;
 
     display: flex;
+    flex: 0 0 18%;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-
-    @include respond(tab-port) {
-        align-content: space-around;
-        height: 7rem;
-    }
 }
